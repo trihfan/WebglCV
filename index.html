@@ -3,11 +3,72 @@
 <head>	<title>Thibault Cardaire</title>	<meta name="description" content="Cv et portfolio Thibault Cardaire" />	<meta charset="utf-8">	<link rel="shortcut icon" href="favicon.ico" />	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">	<link rel="stylesheet" type="text/css" href="css/slickmenu.css">	<link rel="stylesheet" type="text/css" href="css/animate.min.css">	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>	<div id="footer-copy" class="animated bounceInRight">Thibault Cardaire</div>
-	<!-- UI -->	<script src="js/jquery-2.1.1.min.js"></script>	<script src="js/jquery-ui.min.js"></script>	<script src="js/bootstrap.min.js"></script>	<script src="js/jquery.jslickmenu.js"></script>	<script src="js/jquery.magnific-popup.js"></script>		<!-- Menu -->	<div>		<div id="main-menu" class="animated bounceInDown">			<span class="main-menu-text animated bounceInRight"><a href="#" onclick="SetCV();"><i class="fa fa-user"></i>&nbsp;&nbsp;  CV / Resume</a></span> 			<span style="margin-left:40px;" class="main-menu-text animated bounceInRight"><a href="#" onclick="SetPortfolio();"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;  Portfolio<a/></span> 		</div>	</div>		<!-- Social icons -->	<div id="social-icon-panel" class="animated bounceInRight">		<span>			<a onclick="openLink('https://www.linkedin.com/in/thibault-cardaire-1aa6b499/');"><img class="social-icon" src="images/linkedin.png"></img></a>		</span>	</div>
-		<!-- Main panel -->	<div>		<div id="main-panel-FR" class="animated"></div>		<div id="main-panel-EN" class="animated"></div>		<div id="main-panel-portfolio-FR" class="animated"></div>		<div id="main-panel-portfolio-EN" class="animated"></div>	</div>
-		<!-- Language menu -->	<div id="lang-menu" class="animated bounceInLeft">		<div id="lang-menu-slick">			<ul>				<li><a href="javascript:SetLanguageFR();">					<img style="width:75px;" src="images/FR.png" alt="Français" />				</a></li>				<li><a href="javascript:SetLanguageEN();">					<img style="width:75px;" src="images/EN.png" alt="English" />				</a></li>			</ul>		</div>	</div>
-	<!-- Scene 3D -->	<div id="loadbarscene" class="loadie">	</div>	<div id="scene-loader" style="width:100%;text-align:center;position:fixed;top:30px;opacity:0.65;font-size:25px;font-family:titleFont;">		<div class="animated bounceInDown">		  Mise en place de la scène: 0%		</div>	</div>	<div id="tt-volume">		<div onclick="toggleVolume();" class="animated bounceInLeft volume-toggle" >			<span class="fa-stack fa-lg">			  <i class="fa fa-volume-up fa-stack-2x"></i>			  <i id="on-off-volume-icon" class="fa fa-ban fa-stack-2x text-danger"></i>			</span>			<br><p style="font-family:titleFont;">Make It Awesome<p>		</div>	</div>	<canvas style="position:fixed;top:0;left:0;height:100%;width:100%;" id="canvas-scene"></canvas>
+	<!-- UI -->	
+	<script src="js/jquery-2.1.1.min.js"></script>	
+	<script src="js/jquery-ui.min.js"></script>	
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/jquery.jslickmenu.js"></script>	
+	<script src="js/jquery.magnific-popup.js"></script>		
+
+	<!-- Menu -->	
+	<div>		
+		<div id="main-menu" class="animated bounceInDown">			
+			<span class="main-menu-text animated bounceInRight">
+				<a href="#" onclick="SetCV();"><i class="fa fa-user"></i>&nbsp;&nbsp;  CV / Resume</a>
+			</span> 			
+			<span style="margin-left:40px;" class="main-menu-text animated bounceInRight">
+				<a href="#" onclick="SetPortfolio();"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;  Portfolio</a>
+			</span> 		
+		</div>	
+	</div>		
 	
+	<!-- Social icons -->	
+	<div id="social-icon-panel" class="animated bounceInRight">		
+		<span>			
+			<a onclick="openLink('https://www.linkedin.com/in/thibault-cardaire-1aa6b499/');">
+				<img class="social-icon" src="images/linkedin.png"></img>
+			</a>
+			<a onclick="openLink('https://github.com/trihfan');">
+				<img class="social-icon" src="images/github.png"></img>
+			</a>		
+		</span>	
+	</div>
+
+	<!-- Main panel -->	
+	<div>		
+		<div id="main-panel-FR" class="animated"></div>		
+		<div id="main-panel-EN" class="animated"></div>		
+		<div id="main-panel-portfolio-FR" class="animated"></div>		
+		<div id="main-panel-portfolio-EN" class="animated"></div>	
+	</div>
+
+	<!-- Language menu -->	
+	<div id="lang-menu" class="animated bounceInLeft">		
+		<div id="lang-menu-slick">			
+			<ul>				
+				<li><a href="javascript:SetLanguageFR();"><img style="width:75px;" src="images/FR.png" alt="Français" /></a></li>				
+				<li><a href="javascript:SetLanguageEN();"><img style="width:75px;" src="images/EN.png" alt="English" /></a></li>			
+			</ul>		
+		</div>	
+	</div>
+
+	<!-- Scene 3D -->	
+	<div id="loadbarscene" class="loadie"></div>	
+	<div id="scene-loader" style="width:100%;text-align:center;position:fixed;top:30px;opacity:0.65;font-size:25px;font-family:titleFont;">		
+		<div class="animated bounceInDown">		  Mise en place de la scène: 0%		</div>	
+	</div>	
+	<div id="tt-volume">		
+		<div onclick="toggleVolume();" class="animated bounceInLeft volume-toggle" >			
+			<span class="fa-stack fa-lg">			  
+				<i class="fa fa-volume-up fa-stack-2x"></i>			  
+				<i id="on-off-volume-icon" class="fa fa-ban fa-stack-2x text-danger"></i>			
+			</span>			
+			<br><p style="font-family:titleFont;">Make It Awesome<p>		
+		</div>	
+		</div>	
+		<canvas style="position:fixed;top:0;left:0;height:100%;width:100%;" id="canvas-scene"></canvas>
+	
+	<!-- Scripts -->	
 	<script src="js/three.min.js"></script>
 	<script src="js/OrbitControls.js"></script>
 	<script src='js/THREEx.WindowResize.js'></script>
