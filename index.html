@@ -1,74 +1,92 @@
 <!doctype html>
 <html lang="fr">
-<head>	<title>Thibault Cardaire</title>	<meta name="description" content="Cv et portfolio Thibault Cardaire" />	<meta charset="utf-8">	<link rel="shortcut icon" href="favicon.ico" />	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">	<link rel="stylesheet" type="text/css" href="css/slickmenu.css">	<link rel="stylesheet" type="text/css" href="css/animate.min.css">	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">	<link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-<body>	<div id="footer-copy" class="animated bounceInRight">Thibault Cardaire</div>
-	<!-- UI -->	
-	<script src="js/jquery-2.1.1.min.js"></script>	
-	<script src="js/jquery-ui.min.js"></script>	
-	<script src="js/bootstrap.min.js"></script>	
-	<script src="js/jquery.jslickmenu.js"></script>	
-	<script src="js/jquery.magnific-popup.js"></script>		
 
-	<!-- Menu -->	
-	<div>		
-		<div id="main-menu" class="animated bounceInDown">			
+<head>
+	<title>Thibault Cardaire</title>
+	<meta name="description" content="Cv et portfolio Thibault Cardaire" />
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/slickmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+	<div id="footer-copy" class="animated bounceInRight">Thibault Cardaire</div>
+	<!-- UI -->
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.jslickmenu.js"></script>
+	<script src="js/jquery.magnific-popup.js"></script>
+
+	<!-- Menu -->
+	<div>
+		<div id="main-menu" class="animated bounceInDown">
 			<span class="main-menu-text animated bounceInRight">
-				<a href="#" onclick="SetCV();"><i class="fa fa-user"></i>&nbsp;&nbsp;  CV / Resume</a>
-			</span> 			
+				<a href="#" onclick="SetCV();"><i class="fa fa-user"></i>&nbsp;&nbsp; Resume</a>
+			</span>
 			<span style="margin-left:40px;" class="main-menu-text animated bounceInRight">
-				<a href="#" onclick="SetPortfolio();"><i class="fa fa-briefcase"></i>&nbsp;&nbsp;  Portfolio</a>
-			</span> 		
-		</div>	
-	</div>		
-	
-	<!-- Social icons -->	
-	<div id="social-icon-panel" class="animated bounceInRight">		
-		<span>			
+				<a href="#" onclick="SetPortfolio();"><i class="fa fa-briefcase"></i>&nbsp;&nbsp; Projects</a>
+			</span>
+		</div>
+	</div>
+
+	<!-- Social icons -->
+	<div id="social-icon-panel" class="animated bounceInRight">
+		<span>
 			<a onclick="openLink('https://www.linkedin.com/in/thibault-cardaire-1aa6b499/');">
 				<img class="social-icon" src="images/linkedin.png"></img>
 			</a>
 			<a onclick="openLink('https://github.com/trihfan');">
 				<img class="social-icon" src="images/github.png"></img>
-			</a>		
-		</span>	
+			</a>
+		</span>
 	</div>
 
-	<!-- Main panel -->	
-	<div>		
-		<div id="main-panel-FR" class="animated"></div>		
-		<div id="main-panel-EN" class="animated"></div>		
-		<div id="main-panel-portfolio-FR" class="animated"></div>		
-		<div id="main-panel-portfolio-EN" class="animated"></div>	
+	<!-- Main panel -->
+	<div>
+		<div id="main-panel-FR" class="animated"></div>
+		<div id="main-panel-EN" class="animated"></div>
+		<div id="main-panel-portfolio-FR" class="animated"></div>
+		<div id="main-panel-portfolio-EN" class="animated"></div>
 	</div>
 
-	<!-- Language menu -->	
-	<div id="lang-menu" class="animated bounceInLeft">		
-		<div id="lang-menu-slick">			
-			<ul>				
-				<li><a href="javascript:SetLanguageFR();"><img style="width:75px;" src="images/FR.png" alt="Français" /></a></li>				
-				<li><a href="javascript:SetLanguageEN();"><img style="width:75px;" src="images/EN.png" alt="English" /></a></li>			
-			</ul>		
-		</div>	
+	<!-- Language menu -->
+	<div id="lang-menu" class="animated bounceInLeft">
+		<div id="lang-menu-slick">
+			<ul>
+				<li><a href="javascript:SetLanguageFR();"><img style="width:75px;" src="images/FR.png"
+							alt="Français" /></a></li>
+				<li><a href="javascript:SetLanguageEN();"><img style="width:75px;" src="images/EN.png"
+							alt="English" /></a></li>
+			</ul>
+		</div>
 	</div>
 
-	<!-- Scene 3D -->	
-	<div id="loadbarscene" class="loadie"></div>	
-	<div id="scene-loader" style="width:100%;text-align:center;position:fixed;top:30px;opacity:0.65;font-size:25px;font-family:titleFont;">		
-		<div class="animated bounceInDown">		  Mise en place de la scène: 0%		</div>	
-	</div>	
-	<div id="tt-volume">		
-		<div onclick="toggleVolume();" class="animated bounceInLeft volume-toggle" >			
-			<span class="fa-stack fa-lg">			  
-				<i class="fa fa-volume-up fa-stack-2x"></i>			  
-				<i id="on-off-volume-icon" class="fa fa-ban fa-stack-2x text-danger"></i>			
-			</span>			
-			<br><p style="font-family:titleFont;">Make It Awesome<p>		
-		</div>	
-		</div>	
-		<canvas style="position:fixed;top:0;left:0;height:100%;width:100%;" id="canvas-scene"></canvas>
-	
-	<!-- Scripts -->	
+	<!-- Scene 3D -->
+	<div id="loadbarscene" class="loadie"></div>
+	<div id="scene-loader"
+		style="width:100%;text-align:center;position:fixed;top:30px;opacity:0.65;font-size:25px;font-family:titleFont;">
+		<div class="animated bounceInDown"> Mise en place de la scène: 0% </div>
+	</div>
+	<div id="tt-volume">
+		<div onclick="toggleVolume();" class="animated bounceInLeft volume-toggle">
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-volume-up fa-stack-2x"></i>
+				<i id="on-off-volume-icon" class="fa fa-ban fa-stack-2x text-danger"></i>
+			</span>
+			<br>
+			<p style="font-family:titleFont;">Make It Awesome<p>
+		</div>
+	</div>
+	<canvas style="position:fixed;top:0;left:0;height:100%;width:100%;" id="canvas-scene"></canvas>
+
+	<!-- Scripts -->
 	<script src="js/three.min.js"></script>
 	<script src="js/OrbitControls.js"></script>
 	<script src='js/THREEx.WindowResize.js'></script>
@@ -77,24 +95,21 @@
 	<script src="js/howler.min.js"></script>
 
 	<script>
-		window.addEventListener ('resize', function(event)
-		{
-			if (window.outerWidth < 700) 
-			{
+		window.addEventListener('resize', function (event) {
+			if (window.outerWidth < 700) {
 				$("#social-icon-panel").removeClass("bounceInRight");
 				$("#social-icon-panel").addClass("bounceOutRight");
 				$("#social-icon-panel").addClass("bounceOutRight");
 				$("#lang-menu").removeClass("bounceInLeft");
 				$("#lang-menu").addClass("bounceOutLeft");
 			}
-			else 
-			{
+			else {
 				$("#social-icon-panel").removeClass("bounceOutRight");
 				$("#social-icon-panel").addClass("bounceInRight");
 				$("#lang-menu").removeClass("bounceOutLeft");
 				$("#lang-menu").addClass("bounceInLeft");
 			}
-			
+
 			$("#p1").css("left", (window.innerWidth - Math.max($("#p1").outerWidth(true), $("#p2").outerWidth(true))) / 2);
 			$("#p2").css("left", (window.innerWidth - Math.max($("#p1").outerWidth(true), $("#p2").outerWidth(true))) / 2);
 			$("#p3").css("left", (window.innerWidth - Math.max($("#p3").outerWidth(true), $("#p4").outerWidth(true))) / 2);
@@ -103,10 +118,9 @@
 
 		var lastTop = 0;
 		var currentTop = 100;
-			
-		function openLink (link) 
-		{
-			window.open(link,'_blank');
+
+		function openLink(link) {
+			window.open(link, '_blank');
 		}
 
 		var language = 0;
@@ -117,31 +131,26 @@
 		$("#main-panel-portfolio-EN").hide();
 		$("#main-panel-portfolio-FR").hide();
 
-		function GetURLParameter(sParam) 
-		{
+		function GetURLParameter(sParam) {
 			var sPageURL = window.location.search.substring(1);
 			var sURLVariables = sPageURL.split('&');
-			for (var i = 0; i < sURLVariables.length; i++) 
-			{
+			for (var i = 0; i < sURLVariables.length; i++) {
 				var sParameterName = sURLVariables[i].split('=');
-				if (sParameterName[0] == sParam) 
-				{
+				if (sParameterName[0] == sParam) {
 					return sParameterName[1];
 				}
 			}
 		}
 
-		if (GetURLParameter('Lang') == 'EN') 
-		{
+		if (GetURLParameter('Lang') == 'EN') {
 			language = 1;
 			$("#main-panel-EN").show();
-			$("#main-panel-EN").addClass("bounceInUp");		
+			$("#main-panel-EN").addClass("bounceInUp");
 		}
-		else 
-		{
+		else {
 			language = 0;
-			$("#main-panel-FR").show();	
-			$("#main-panel-FR").addClass("bounceInUp");		
+			$("#main-panel-FR").show();
+			$("#main-panel-FR").addClass("bounceInUp");
 		}
 
 		$("#main-panel-EN").css("position", "relative");
@@ -156,53 +165,46 @@
 		$("#main-panel-portfolio-EN").css("position", "relative");
 		$("#main-panel-portfolio-EN").css("top", 100);
 		$("#main-panel-portfolio-EN").css("z-index", 100);
-			
+
 		// Load
-		$("#main-panel-FR").load("cv_FR.html", function () 
-		{
-			$(".main-panel").css("left", (window.innerWidth - $(".main-panel").outerWidth(true)) / 2);	
+		$("#main-panel-FR").load("cv_FR.html", function () {
+			$(".main-panel").css("left", (window.innerWidth - $(".main-panel").outerWidth(true)) / 2);
 			$("body").css("height", 2500);
 		});
 
-		$("#main-panel-EN").load("cv_EN.html", function () 
-		{
-			$(".main-panel").css("left", (window.innerWidth - $(".main-panel").outerWidth(true)) / 2);	
+		$("#main-panel-EN").load("cv_EN.html", function () {
+			$(".main-panel").css("left", (window.innerWidth - $(".main-panel").outerWidth(true)) / 2);
 		});
 
-		$("#main-panel-portfolio-FR").load( "portfolio_FR.html", function () 
-		{
-			$(".main-panel").css("left", (window.innerWidth - $(".main-panel").outerWidth(true)) / 2);	
+		$("#main-panel-portfolio-FR").load("portfolio_FR.html", function () {
+			$(".main-panel").css("left", (window.innerWidth - $(".main-panel").outerWidth(true)) / 2);
 		});
 
-		$("#main-panel-portfolio-EN").load( "portfolio_EN.html", function () 
-		{
-			$(".main-panel").css("left", (window.innerWidth - $(".main-panel").outerWidth(true)) / 2);	
+		$("#main-panel-portfolio-EN").load("portfolio_EN.html", function () {
+			$(".main-panel").css("left", (window.innerWidth - $(".main-panel").outerWidth(true)) / 2);
 		});
 
 		// Lang menu
-		$(document).ready(function()
-		{	
+		$(document).ready(function () {
 			$("#lang-menu-slick").jSlickmenu(
-			{
-				speed : 100,
-				leftmargin : 60,
-				css3borderradius : 0,
-				css3shadow : '#999 0px 0px 0px',
-				borderneutral : 3,
-				borderhover : 8
-			});	
+				{
+					speed: 100,
+					leftmargin: 60,
+					css3borderradius: 0,
+					css3shadow: '#999 0px 0px 0px',
+					borderneutral: 3,
+					borderhover: 8
+				});
 		});
 
-		function SetLanguageFR() 
-		{
+		function SetLanguageFR() {
 			language = 0;
-			
-			if(type == 0) 
-			{
+
+			if (type == 0) {
 				$("#main-panel-FR").show();
 				$("#main-panel-EN").removeClass("bounceInUp");
 				$("#main-panel-EN").addClass("bounceOutUp");
-				
+
 				$("#main-panel-FR").removeClass("bounceOutUp");
 				$("#main-panel-FR").addClass("bounceInUp");
 
@@ -210,12 +212,11 @@
 				$("#p1").css("left", (window.innerWidth - Math.max($("#p1").outerWidth(true), $("#p2").outerWidth(true))) / 2);
 				$("#p2").css("left", (window.innerWidth - Math.max($("#p1").outerWidth(true), $("#p2").outerWidth(true))) / 2);
 			}
-			else 
-			{
+			else {
 				$("#main-panel-portfolio-FR").show();
 				$("#main-panel-portfolio-EN").removeClass("bounceInUp");
 				$("#main-panel-portfolio-EN").addClass("bounceOutUp");
-				
+
 				$("#main-panel-portfolio-FR").removeClass("bounceOutUp");
 				$("#main-panel-portfolio-FR").addClass("bounceInUp");
 
@@ -225,28 +226,25 @@
 			}
 		}
 
-		function SetLanguageEN() 
-		{
+		function SetLanguageEN() {
 			language = 1;
-			if(type == 0) 
-			{
+			if (type == 0) {
 				$("#main-panel-EN").show();
 				$("#main-panel-FR").removeClass("bounceInUp");
 				$("#main-panel-FR").addClass("bounceOutUp");
-				
+
 				$("#main-panel-EN").removeClass("bounceOutUp");
 				$("#main-panel-EN").addClass("bounceInUp");
 
 				$("#main-panel-EN").css("top", currentTop);
 				$("#p1").css("left", (window.innerWidth - Math.max($("#p1").outerWidth(true), $("#p2").outerWidth(true))) / 2);
-				$("#p2").css("left", (window.innerWidth - Math.max($("#p1").outerWidth(true), $("#p2").outerWidth(true))) / 2);		
+				$("#p2").css("left", (window.innerWidth - Math.max($("#p1").outerWidth(true), $("#p2").outerWidth(true))) / 2);
 			}
-			else 
-			{
+			else {
 				$("#main-panel-portfolio-EN").show();
 				$("#main-panel-portfolio-FR").removeClass("bounceInUp");
 				$("#main-panel-portfolio-FR").addClass("bounceOutUp");
-				
+
 				$("#main-panel-portfolio-EN").removeClass("bounceOutUp");
 				$("#main-panel-portfolio-EN").addClass("bounceInUp");
 
@@ -256,61 +254,53 @@
 			}
 		}
 
-		function SetCV() 
-		{
+		function SetCV() {
 			type = 0;
 			$("#main-panel-portfolio-EN").removeClass("bounceInUp");
 			$("#main-panel-portfolio-EN").addClass("bounceOutUp");
-			
+
 			$("#main-panel-portfolio-FR").removeClass("bounceInUp");
 			$("#main-panel-portfolio-FR").addClass("bounceOutUp");
-			
+
 			$("body").css("height", 2500);
-			
-			setTimeout(function () 
-			{
+
+			setTimeout(function () {
 				$("#main-panel-portfolio-EN").hide();
 				$("#main-panel-portfolio-FR").hide();
 			}, 800);
-			
-			if(language == 0) 
-			{
+
+			if (language == 0) {
 				SetLanguageFR();
 			}
-			else 
-			{
+			else {
 				SetLanguageEN();
 			}
 		}
 
-		function SetPortfolio() 
-		{
+		function SetPortfolio() {
 			type = 1;
 			$("#main-panel-EN").removeClass("bounceInUp");
 			$("#main-panel-EN").addClass("bounceOutUp");
-			
+
 			$("#main-panel-FR").removeClass("bounceInUp");
 			$("#main-panel-FR").addClass("bounceOutUp");
-			
+
 			$("body").css("height", 3650);
-			
-			setTimeout(function () 
-			{
+
+			setTimeout(function () {
 				$("#main-panel-EN").hide();
 				$("#main-panel-FR").hide();
 			}, 800);
-			
-			if(language == 0) 
-			{
+
+			if (language == 0) {
 				SetLanguageFR();
 			}
-			else 
-			{
+			else {
 				SetLanguageEN();
 			}
 		}
 	</script>
-	
+
 	<script>
 		// Set up the scene, camera, and renderer as global variables.
 		var scene, camera, renderer;
@@ -328,39 +318,32 @@
 		var startTime = Date.now();
 		var d1acl = 0, shipacl = 0, audioacl = 0;
 
-		function launch() 
-		{
-			if(d1loaded && shiploaded && audio1loaded) 
-			{
+		function launch() {
+			if (d1loaded && shiploaded && audio1loaded) {
 				init();
 				start();
-				animate( lastTimestamp );
+				animate(lastTimestamp);
 				console.log("Chargement fini: " + ((Date.now() - startTime) / 1000) + "s.");
 			}
-			else 
-			{
+			else {
 				setTimeout(launch, 100);
 			}
 		}
 
 		var totalSizeLoaded = 9209351 + 812260 + 1212260;
 
-		function UpdateLoadStatus () 
-		{
+		function UpdateLoadStatus() {
 			var current = (d1acl + shipacl + audioacl) / totalSizeLoaded;
 			current = Math.min(Math.max(current, 0), 1);
 			$("#scene-loader").text("Mise en place de la scène: " + Math.round(current * 100) + "%");
-			$('#loadbarscene').css("width" , window.innerWidth * current);
+			$('#loadbarscene').css("width", window.innerWidth * current);
 		}
 
-		function LoadScene ()
-		{
-			if (Detector.webgl && !(!!navigator.userAgent.match(/Trident.*rv[ :]*11\./))) 
-			{
+		function LoadScene() {
+			if (Detector.webgl && !(!!navigator.userAgent.match(/Trident.*rv[ :]*11\./))) {
 				var loader = new THREE.ColladaLoader();
-				loader.load('models/droid/Droid.dae', 
-					function(collada) 
-					{
+				loader.load('models/droid/Droid.dae',
+					function (collada) {
 						droid = collada.scene;
 						droidAnimations = collada.animations;
 						kfAnimationsLength = droidAnimations.length;
@@ -369,87 +352,79 @@
 						droid.position.set(-2.2, -22, 0);
 						d1loaded = true;
 
-					}, 
-					function progressCollback(data) 
-					{ 
+					},
+					function progressCollback(data) {
 						d1acl = data.loaded;
 						UpdateLoadStatus();
 					});
 
 				var loaderAudioSystem = new THREE.ColladaLoader();
-				loaderAudioSystem.load('models/radiocassette/radiocassette_reduced.dae', 
-					function(collada){
+				loaderAudioSystem.load('models/radiocassette/radiocassette_reduced.dae',
+					function (collada) {
 						audioSystem = collada.scene;
 						audioSystem.scale.x = audioSystem.scale.y = audioSystem.scale.z = 0.005;
 						audioSystem.rotation.set(0, 0, 1.7 * Math.PI);
 						audioSystem.position.set(-3.5, -20, 0.12);
-						SetShadow (audioSystem);			
+						SetShadow(audioSystem);
 						audio1loaded = true;
-					}, 
-					function progressCollback(data) 
-					{
-						audioacl = data.loaded;			
+					},
+					function progressCollback(data) {
+						audioacl = data.loaded;
 						UpdateLoadStatus();
 					});
 
 				var loaderShip = new THREE.ColladaLoader();
-				loaderShip.load('models/naboo-fighter/naboo-fighter.dae', 
-					function ( collada ) 
-					{
+				loaderShip.load('models/naboo-fighter/naboo-fighter.dae',
+					function (collada) {
 						ship1 = collada.scene;
 						ship1.scale.x = ship1.scale.y = ship1.scale.z = 10.0;
 						ship1.rotation.set(Math.PI / 12, Math.PI / 12, - 2 * Math.PI / 6);
 						ship1.position.set(14, -9, 0);
-						SetShadow (ship1);				
+						SetShadow(ship1);
 						shiploaded = true;
-					}, 
-					function progressCollback(data) 
-					{
+					},
+					function progressCollback(data) {
 						shipacl = data.loaded;
 						UpdateLoadStatus();
 					});
-				
+
 				launch();
-			} 
-			else 
-			{
-				$('#loadbarscene').css("width" , 100);
-				$('#loadbarscene').fadeOut();			
+			}
+			else {
+				$('#loadbarscene').css("width", 100);
+				$('#loadbarscene').fadeOut();
 				$("#scene-loader").fadeOut(
-				{
-					done: function () 
 					{
-						$("#scene-loader").html("Impossible de charger l'animation, votre navigateur n'est pas compatible avec WebGl :'(.");
-						$("#scene-loader").fadeIn();
-					}
-				});
+						done: function () {
+							$("#scene-loader").html("Impossible de charger l'animation, votre navigateur n'est pas compatible avec WebGl :'(.");
+							$("#scene-loader").fadeIn();
+						}
+					});
 			}
 		}
 
 		// Load scene
-		$(document).ready(setTimeout(function()
-			{
-				LoadScene();
-			}, 1050));
-				
+		$(document).ready(setTimeout(function () {
+			LoadScene();
+		}, 1050));
+
 		// Set up the scene
-		function init() 
-		{
+		function init() {
 			// Create the scene and set the scene size.
 			var OFFSET = 50;
 			scene = new THREE.Scene();
 
-			var WIDTH = window.innerWidth, HEIGHT = window.innerHeight;	  
+			var WIDTH = window.innerWidth, HEIGHT = window.innerHeight;
 			var SHADOW_MAP_WIDTH = 4096, SHADOW_MAP_HEIGHT = 4096;
 
 			// Create a renderer and add it to the DOM.
 			var canvas = document.getElementById("canvas-scene");
-			renderer = new THREE.WebGLRenderer({antialias:true, canvas: canvas});
+			renderer = new THREE.WebGLRenderer({ antialias: true, canvas: canvas });
 			renderer.setSize(WIDTH, HEIGHT);
 			document.body.appendChild(renderer.domElement);
 			renderer.shadowMapEnabled = true;
 			renderer.shadowMapType = THREE.PCFSoftShadowMap;
-					
+
 			// Create the camera and bind resize
 			camera = new THREE.PerspectiveCamera(75, WIDTH / HEIGHT, 0.1, 200);
 			camera.position.set(0, -26, 1.5);
@@ -465,9 +440,9 @@
 			// Create a light, set its position, and add it to the scene.
 			var ambient = new THREE.AmbientLight(0xffffff);
 			scene.add(ambient);
-					
+
 			var light = new THREE.SpotLight(0xffffff);
-			light.position.set(5,-28,12);
+			light.position.set(5, -28, 12);
 			light.target.position.set(2.5, -22, 0.2);
 			light.castShadow = true;
 			light.shadowCameraNear = 0.1;
@@ -478,7 +453,7 @@
 			scene.add(light);
 
 			var light2 = new THREE.SpotLight(0xffffff);
-			light2.position.set(-5,-28,12);
+			light2.position.set(-5, -28, 12);
 			light2.target.position.set(-2.5, -22, 0.2);
 			light2.castShadow = true;
 			light2.shadowCameraNear = 0.1;
@@ -487,33 +462,32 @@
 			light2.shadowMapWidth = SHADOW_MAP_WIDTH;
 			light2.shadowMapHeight = SHADOW_MAP_HEIGHT;
 			scene.add(light2);
-		  
+
 			// ===== Floor mesh ==============================================	
 			var floorGeometry = new THREE.PlaneGeometry(100, 100);
-			var floorMaterial = new THREE.MeshBasicMaterial({color: 0xffffff, side: THREE.DoubleSide});	  
-			var floorMesh = new THREE.Mesh(floorGeometry, floorMaterial); 
+			var floorMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, side: THREE.DoubleSide });
+			var floorMesh = new THREE.Mesh(floorGeometry, floorMaterial);
 			floorMesh.castShadow = false;
 			floorMesh.receiveShadow = true;
 			scene.add(floorMesh);
 
 			var geometry = new THREE.CylinderGeometry(100, 100, 100, 32);
-			var material = new THREE.MeshBasicMaterial({color: 0xffffff, side: THREE.DoubleSide});
+			var material = new THREE.MeshBasicMaterial({ color: 0xffffff, side: THREE.DoubleSide });
 			var cylinder = new THREE.Mesh(geometry, material);
-			cylinder.rotation.set(Math.PI / 2,0,0);
-			cylinder.position.set(0,0,0);
+			cylinder.rotation.set(Math.PI / 2, 0, 0);
+			cylinder.position.set(0, 0, 0);
 			scene.add(cylinder);
-					
+
 			// ===== Droid =======================================
 			// KeyFrame Animations
-			for (var i = 0; i < kfAnimationsLength; ++i) 
-			{
+			for (var i = 0; i < kfAnimationsLength; ++i) {
 				var animation = droidAnimations[i];
 				var kfAnimation = new THREE.KeyFrameAnimation(animation);
 				kfAnimation.timeScale = 1;
 				kfAnimations.push(kfAnimation);
 			}
 
-			SetShadow (droid);
+			SetShadow(droid);
 			scene.add(droid);
 
 			// ===== Ship 1 =======================================
@@ -522,55 +496,49 @@
 			scene.add(ship1);
 			var cloneShip = ship1.clone();
 			cloneShip.position.z = -0.5;
-			scene.add(cloneShip);	
+			scene.add(cloneShip);
 			ResetShip();
-			
+
 			// Stop loader		
-			setTimeout(function() 
-			{
+			setTimeout(function () {
 				$("#scene-loader").fadeOut("slow");
 				$('#loadbarscene').fadeOut("slow");
 			}, 250);
-			
+
 			// Set up fog
-			scene.fog = new THREE.Fog(0xF2F2F2, 10, 100);	  
+			scene.fog = new THREE.Fog(0xF2F2F2, 10, 100);
 
 			// Stop controls
 			controls = new THREE.OrbitControls(camera, renderer.domElement);
 			controls.enabled = false;
 		}
 
-		function SetShadow (item) 
-		{
-			if (item instanceof THREE.Mesh) 
-			{
+		function SetShadow(item) {
+			if (item instanceof THREE.Mesh) {
 				item.receiveShadow = false;
 				item.castShadow = true;
 			}
-			
-			for (var i = 0; i < item.children.length; i++) 
-			{
+
+			for (var i = 0; i < item.children.length; i++) {
 				SetShadow(item.children[i]);
 			}
 		}
 
 		// Sounds
 		var volumeMute = true;
-		var soundMacarena = new Howl({urls: ['sounds/Los Del Rio - Macarena.mp3'], loop: true, html5: true});
+		var soundMacarena = new Howl({ urls: ['sounds/Los Del Rio - Macarena.mp3'], loop: true, html5: true });
 		soundMacarena.volume(0.0);
-		var soundFighter = new Howl({urls: ['sounds/nabooflyby.mp3']});
+		var soundFighter = new Howl({ urls: ['sounds/nabooflyby.mp3'] });
 
-		function toggleVolume() 
-		{
-			if(volumeMute) 
-			{				soundMacarena.play();
+		function toggleVolume() {
+			if (volumeMute) {
+				soundMacarena.play();
 				soundMacarena.fadeIn(1.0, 1000);
 				soundFighter.volume(1.0);
 				volumeMute = false;
 				$("#on-off-volume-icon").fadeOut();
 			}
-			else 
-			{
+			else {
 				soundMacarena.fadeOut(0.0, 1000);
 				soundFighter.volume(0.0);
 				volumeMute = true;
@@ -581,72 +549,60 @@
 		// Animations
 		var rotationDone = 0;
 
-		function start() 
-		{
+		function start() {
 			rotationDone = 0;
-			
-			for (var i = 0; i < kfAnimationsLength; ++i) 
-			{
+
+			for (var i = 0; i < kfAnimationsLength; ++i) {
 				var animation = kfAnimations[i];
-				
-				for (var h = 0, hl = animation.hierarchy.length; h < hl; h++) 
-				{
+
+				for (var h = 0, hl = animation.hierarchy.length; h < hl; h++) {
 					var keys = animation.data.hierarchy[h].keys;
 					var sids = animation.data.hierarchy[h].sids;
 					var obj = animation.hierarchy[h];
 
-					if (keys.length && sids) 
-					{
-						for (var s = 0; s < sids.length; s++) 
-						{
+					if (keys.length && sids) {
+						for (var s = 0; s < sids.length; s++) {
 							var sid = sids[s];
 							var next = animation.getNextKeyWith(sid, h, 0);
-							
-							if (next)
-							{
+
+							if (next) {
 								next.apply(sid);
 							}
 						}
-						
+
 						obj.matrixAutoUpdate = false;
 						animation.data.hierarchy[h].node.updateMatrix();
 						obj.matrixWorldNeedsUpdate = true;
 					}
 				}
-				
+
 				animation.loop = false;
 				animation.play();
 				lastTimestamp = Date.now();
 			}
 		}
 
-		function animate() 
-		{
+		function animate() {
 			var timestamp = Date.now();
 			var frameTime = (timestamp - lastTimestamp) * 0.0015; // seconds
 
 			MoveShip1(frameTime);
-			
-			if (progress >= 15.5 && rotationDone < Math.PI / 2) 
-			{
+
+			if (progress >= 15.5 && rotationDone < Math.PI / 2) {
 				rotationDone += Math.PI / 2 / 15;
 				droid.rotation.set(0, 0, droid.rotation.z + Math.PI / 2 / 15);
 			}
-			
-			if (progress >= 0 && progress < 16.25) 
-			{
-				for ( var i = 0; i < kfAnimationsLength; ++i ) 
-				{
-					kfAnimations[ i ].update( frameTime );
+
+			if (progress >= 0 && progress < 16.25) {
+				for (var i = 0; i < kfAnimationsLength; ++i) {
+					kfAnimations[i].update(frameTime);
 				}
-			} 
-			else if (progress >= 16.25) 
-			{
-				for (var i = 0; i < kfAnimationsLength; ++i) 
-				{
-					kfAnimations[ i ].stop();
-				}	
-				
+			}
+			else if (progress >= 16.25) {
+				for (var i = 0; i < kfAnimationsLength; ++i) {
+					kfAnimations[i].stop();
+				}
+
 				progress = 0;
 				start();
 			}
@@ -660,48 +616,48 @@
 		var shipX, shipY, shipZ;
 		var sounded;
 
-		function ResetShip() 
-		{
+		function ResetShip() {
 			sounded = false;
 			shipX = 20;
 			shipY = 0;
 			shipZ = 2;
 		}
 
-		function MoveShip1(frameTime) 
-		{
-			if (ship1 != null) 
-			{
+		function MoveShip1(frameTime) {
+			if (ship1 != null) {
 				var mvt = frameTime * 2.5;
-				
-				if (shipX < 5.5 && !sounded) 
-				{
+
+				if (shipX < 5.5 && !sounded) {
 					sounded = true;
 					soundFighter.play();
-					
-					if (volumeMute) 
-					{
+
+					if (volumeMute) {
 						soundFighter.volume(0.0);
 					}
-					else 
-					{
+					else {
 						soundFighter.fadeIn(1.0, 250);
 					}
 				}
-					
+
 				shipX -= mvt;
 				shipY = -0.03125 * shipX * shipX + 1.25 * shipX + -17.375;
 				shipZ += mvt / 10;
 				ship1.position.set(shipX, shipY, shipZ);
-				
+
 				nextShipX = shipX - 0.001;
 				nextShipY = -0.03125 * nextShipX * nextShipX + 1.25 * nextShipX + -17.375;
 				ship1.rotation.set(Math.PI / 5, Math.PI / 12, 5);
-				
-				if (shipX <= -50)
-				{
+
+				if (shipX <= -50) {
 					ResetShip();
 				}
 			}
 		}
-	</script>	<div style="position:absolute; bottom:-50px;">		<a href="https://seal.beyondsecurity.com/vulnerability-scanner-verification/www.thibault-cardaire.rocks"><img src="https://seal.beyondsecurity.com/verification-images/www.thibault-cardaire.rocks/vulnerability-scanner-2.gif" alt="Website Security Test" border="0"></a>	</div></body></html>
+	</script>
+	<div style="position:absolute; bottom:-50px;"> <a
+			href="https://seal.beyondsecurity.com/vulnerability-scanner-verification/www.thibault-cardaire.rocks"><img
+				src="https://seal.beyondsecurity.com/verification-images/www.thibault-cardaire.rocks/vulnerability-scanner-2.gif"
+				alt="Website Security Test" border="0"></a> </div>
+</body>
+
+</html>

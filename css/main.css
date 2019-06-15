@@ -1,3 +1,8 @@
+body 
+{ 
+	color: #424242;
+}
+
 .main-panel 
 {
 	padding:20px;
@@ -140,6 +145,18 @@ body
 	src: url('../fonts/AmaticSC-Regular.ttf');
 }
 
+@font-face 
+{
+	font-family: codeBold;
+	src: url('../fonts/CODE_Bold.otf');
+}
+
+@font-face 
+{
+	font-family: codeLight;
+	src: url('../fonts/CODE_Light.otf');
+}
+
 #social-icon-panel 
 {
 	position:fixed;
@@ -168,7 +185,7 @@ body
 {
 	height: 44px;
 	font-family: titleFont;
-	background: url(../images/gray-trans.png) no-repeat;
+	background: url(../images/separator.png) no-repeat;
 	display: block;
 	position:relative;
 	top:10px;
@@ -181,17 +198,11 @@ body
 	transition: background 0.75s ease;
 }
 
-.h-par-img:hover 
-{
-	background: url(../images/blue-trans.png) no-repeat;
-	transition: background 0.75s ease;
-}
-
 .h-par-img-2 
 {
 	height: 44px;
 	font-family: titleFont;
-	background: url(../images/blue-trans.png) no-repeat;
+	background: url(../images/separator.png) no-repeat;
 	display: block;
 	position:relative;
 	top:10px;
@@ -208,7 +219,7 @@ body
 {
 	height: 44px;
 	font-family: titleFont;
-	background: url(../images/green-trans.png) no-repeat;
+	background: url(../images/separator.png) no-repeat;
 	display: block;
 	position:relative;
 	top:10px;
@@ -233,7 +244,7 @@ body
 
 a
 {
-	color: #333;
+	color: #424242;
 	transition: color 0.45s ease;
 }
 
@@ -277,14 +288,8 @@ a:hover
 
 .date 
 {
+	color: #424242;
 	font-size:16px;
-	color: #333;
-	transition: color 1s ease;
-}
-
-.date:hover 
-{
-	color: #AE63D3;
 	transition: color 1s ease;
 }
 
